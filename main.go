@@ -20,7 +20,7 @@ type allEvents []event
 var events = allEvents{
 	{
 		ID:          "1",
-		Title:       "Introduction to golang V2",
+		Title:       "Introduction to golang V2 dev",
 		Description: "Come join us for a chance to learn how golang works",
 	},
 }
