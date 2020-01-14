@@ -3,10 +3,11 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/gorilla/mux"
 	"io/ioutil"
 	"log"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 type event struct {
@@ -54,5 +55,6 @@ func main() {
 	router.HandleFunc("/event", createEvent).Methods(http.MethodPost)
 	router.HandleFunc("/event/{id}", getOneEvent).Methods(http.MethodGet)
 	router.HandleFunc("/event", getAllEvents).Methods(http.MethodGet)
+	router.HandleFunc("/eventA", getAllEventsA).Methods(http.MethodGet)
 	log.Fatal(http.ListenAndServe(":8888", router))
 }
